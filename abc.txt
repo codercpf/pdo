@@ -1,0 +1,16 @@
+﻿
+exec()		执行一条SQL语句，返回其受影响的行数
+
+query()		执行一条SQL语句，返回一个PDOStatement对象
+
+prepare()	准备要执行的SQL语句，返回PDOStatement对象
+
+quote()		返回一个添加引号的字符串，用于SQL语句中
+
+lastInsertId()	返回最后插入行的ID
+
+setAttribute()	设置数据库连接属性
+getAttribute()	得到数据库的连接属性
+
+errorCode()	获取跟数据库句柄上一次操作相关的SQLSTATE
+errorInfo()	获取跟数据库句柄上一次操作的错误信息

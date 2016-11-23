@@ -1,0 +1,14 @@
+﻿
+execute() 		执行一条预处理语句
+rowCount()		返回上一个SQL语句影响的行数
+
+fetch()			从结果集中获取一行
+fetchAll()		从结果集中获取所有行，返回二维数组
+
+setFetchMode()		为语句设置默认的获取模式
+fetchColumn()		从结果集中下一行返回单独的一列
+
+fetchObject()		获取下一行，作为一个对象返回
+
+bindParam()		绑定一个参数到指定的变量名
+bindValue()		把一个值绑定到一个参数
