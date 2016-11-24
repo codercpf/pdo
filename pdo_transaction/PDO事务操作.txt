@@ -1,0 +1,8 @@
+
+事务特性：要么不做，要么全做。
+ACID：原子、独立、一致、持久
+
+beginTransaction()		启动一个事务
+commit()				提交一个事务
+rollBack()				回滚一个事务
+inTransaction()			检测是否在一个事务内
