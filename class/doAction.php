@@ -104,7 +104,10 @@ EOF;
 	echo "<pre>";
 	exit;
 */
-	if($row['status'] == 0) {
+	if (!$row) {
+		echo '用户名或密码错误，请重新登录';
+		echo '<meta http-equiv="refresh" content="3;url=index.php" />';
+	}elseif($row['status'] == 0) {
 		echo '该账户未激活，请先激活再登录';
 		echo '<meta http-equiv="refresh" content="5;url=index.php" />';
 	}else{
@@ -214,7 +217,7 @@ EOF;
 
 	$code = $_GET['code'];
 	if ($code) {
-		$getcode = $_GET['code'];			//将getcode传入
+		//$getcode = $_GET['code'];			//将getcode传入，框架中将$getcode赋给模板
 
 		$key = $_SESSION['sys_auth_key'];
 		$code = sys_auth($code,'DECODE',$key);
@@ -242,8 +245,6 @@ EOF;
 	require_once 'func.inc.php';
 
 	$code = $_GET['code'];
-
-	echo $code;exit;
 
 	if ($code) {
 		$key = $_SESSION['sys_auth_key'];

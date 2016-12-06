@@ -15,7 +15,7 @@
 */
 function sys_auth($string, $operation = 'ENCODE', $key = '', $expiry = 0) {
 	$ckey_length = 4;
-	$key = md5($key != '' ? $key : pc_base::load_config('system', 'auth_key'));
+	$key = md5($key != '' ? $key : '');
 	$keya = md5(substr($key, 0, 16));
 	$keyb = md5(substr($key, 16, 16));
 	$keyc = $ckey_length ? ($operation == 'DECODE' ? substr($string, 0, $ckey_length): substr(md5(microtime()), -$ckey_length)) : '';
